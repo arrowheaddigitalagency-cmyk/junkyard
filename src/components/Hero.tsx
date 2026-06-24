@@ -147,23 +147,18 @@ export function Hero() {
             />
             
             {/* Main Visual Frame */}
-            <motion.div 
-              animate={{ 
-                x: mousePosition.x * 2,
-                y: mousePosition.y * 2
-              }}
-              transition={{ type: "spring", stiffness: 50, damping: 20 }}
+            <div 
               className="absolute inset-4 sm:inset-10 lg:inset-8 xl:inset-12 rounded-[2.5rem] bg-secondary/50 p-3 border border-white/50 shadow-2xl backdrop-blur-sm"
             >
               <div className="w-full h-full rounded-[2rem] overflow-hidden relative shadow-inner">
                 {/* Authentic Tow Truck / Salvage Yard Composition */}
                 <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-[10000ms] hover:scale-110 ease-linear"
+                  className="absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: "url('/my-hero.jpg')" }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-primary/20 mix-blend-overlay pointer-events-none"></div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Floating Badges (Glassmorphism) */}
             <motion.div
