@@ -33,7 +33,7 @@ function Counter({ value, duration, isFloat }: { value: number; duration: number
 
 export function TrustBar() {
   return (
-    <section className="relative py-12 bg-black/40 border-y border-white/5 backdrop-blur-sm z-10">
+    <section className="relative py-12 bg-white border-y border-border z-10 shadow-sm">
       <div className="container px-4 md:px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, index) => (
@@ -45,7 +45,7 @@ export function TrustBar() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="flex flex-col items-center justify-center space-y-2 text-center"
             >
-              <h4 className="text-4xl md:text-5xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white to-white/50">
+              <h4 className="text-4xl md:text-5xl font-bold tracking-tighter text-foreground">
                 <Counter value={stat.value} duration={stat.duration} isFloat={stat.isFloat} />
                 <span className="text-primary">{stat.suffix}</span>
               </h4>

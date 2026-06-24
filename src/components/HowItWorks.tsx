@@ -32,10 +32,10 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-24 bg-black relative">
+    <section className="py-24 bg-secondary/30 relative">
       <div className="container px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">How It Works</h2>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-foreground">How It Works</h2>
           <p className="text-muted-foreground text-lg">
             Our streamlined process makes selling your junk car effortless. Get paid in four simple steps.
           </p>
@@ -43,7 +43,7 @@ export function HowItWorks() {
 
         <div className="relative grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Connecting line */}
-          <div className="hidden md:block absolute top-1/4 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent -translate-y-1/2"></div>
+          <div className="hidden md:block absolute top-1/4 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/30 to-transparent -translate-y-1/2"></div>
 
           {steps.map((step, index) => (
             <motion.div
@@ -54,13 +54,13 @@ export function HowItWorks() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="relative flex flex-col items-center text-center space-y-4"
             >
-              <div className="w-16 h-16 rounded-full bg-black border-2 border-primary flex items-center justify-center z-10 relative shadow-[0_0_15px_rgba(200,80,20,0.5)]">
+              <div className="w-16 h-16 rounded-full bg-white border-2 border-primary flex items-center justify-center z-10 relative shadow-lg">
                 <step.icon className="w-8 h-8 text-primary" />
-                <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-xs font-bold border border-white/10">
+                <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-foreground flex items-center justify-center text-xs font-bold text-white border-2 border-white">
                   {step.num}
                 </div>
               </div>
-              <h4 className="text-xl font-semibold mt-4">{step.title}</h4>
+              <h4 className="text-xl font-semibold mt-4 text-foreground">{step.title}</h4>
               <p className="text-sm text-muted-foreground">{step.description}</p>
             </motion.div>
           ))}
