@@ -20,7 +20,10 @@ export function AboutCompany() {
             className="relative h-[350px] sm:h-[400px] md:h-[500px] rounded-3xl overflow-hidden border border-border shadow-xl order-2 lg:order-1"
           >
             {/* Authentic Junkyard/Scrap Car Image */}
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544626081-35c829e08d51?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=2070&auto=format&fit=crop')" }}
+            ></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
             
             <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8">

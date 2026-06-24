@@ -157,8 +157,11 @@ export function Hero() {
             >
               <div className="w-full h-full rounded-[2rem] overflow-hidden relative shadow-inner">
                 {/* Authentic Tow Truck / Salvage Yard Composition */}
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544626081-35c829e08d51?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-[10000ms] hover:scale-110 ease-linear"></div>
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-primary/20 mix-blend-overlay"></div>
+                <div 
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-[10000ms] hover:scale-110 ease-linear"
+                  style={{ backgroundImage: "url('/my-hero.jpg')" }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-primary/20 mix-blend-overlay pointer-events-none"></div>
               </div>
             </motion.div>
 

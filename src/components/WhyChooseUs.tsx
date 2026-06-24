@@ -55,7 +55,10 @@ export function WhyChooseUs() {
             
             <div className="relative h-[300px] sm:h-[400px] rounded-2xl overflow-hidden border border-border shadow-xl">
               {/* Authentic Auto Salvage / Tow Truck Image */}
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
+              <div 
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=2070&auto=format&fit=crop')" }}
+              ></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
           </motion.div>
