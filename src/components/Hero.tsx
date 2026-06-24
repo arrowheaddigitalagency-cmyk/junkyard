@@ -135,8 +135,7 @@ export function Hero() {
           </motion.div>
 
           {/* Right Column: 3D Composition & Imagery */}
-          <motion.div
-            style={{ y: y1 }}
+          <div
             className="relative w-full h-[500px] lg:h-[700px] mt-12 lg:mt-0"
           >
             {/* Background 3D Elements */}
@@ -196,7 +195,7 @@ export function Hero() {
               className="absolute top-0 right-0 w-24 h-24 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjM0LCA4OCLCAxMiwgMC4yKSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwb2x5Z29uIHBvaW50cz0iMTIgMiA1IDIxIDIyIDkiPjwvcG9seWdvbj48L3N2Zz4=')] opacity-50 bg-contain bg-no-repeat bg-center mix-blend-multiply"
             />
 
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
