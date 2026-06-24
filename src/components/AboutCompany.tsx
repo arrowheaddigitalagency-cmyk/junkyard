@@ -49,7 +49,7 @@ export function AboutCompany() {
                 Arrowhead Digitech was founded on a singular vision: to revolutionize the automotive recycling industry by introducing transparency, technology, and premium customer service to what was traditionally a chaotic market.
               </p>
               <p>
-                We are committed to eco-friendly recycling practices, ensuring that every vehicle we process is dismantled responsibly. We extract maximum value, saving millions of pounds of usable parts from landfills, while safely disposing of hazardous materials.
+                We are committed to eco-friendly recycling practices, ensuring that every vehicle we process is dismantled responsibly. We extract maximum value, saving millions of dollars of usable parts from landfills, while safely disposing of hazardous materials.
               </p>
             </div>
 
