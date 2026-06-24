@@ -15,26 +15,26 @@ export function InstantQuote() {
   };
 
   return (
-    <section className="py-24 bg-white relative" id="quote">
-      <div className="container px-4 md:px-6">
+    <section className="py-16 md:py-24 bg-white relative" id="quote">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-3xl border border-border bg-white p-8 md:p-12 shadow-2xl relative overflow-hidden"
+            className="rounded-3xl border border-border bg-white p-6 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden"
           >
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] -z-10"></div>
+            <div className="absolute top-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-primary/5 rounded-full blur-[80px] md:blur-[100px] -z-10"></div>
             
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-foreground">Get Your Instant Quote</h2>
-              <p className="text-muted-foreground text-lg">Fill out the details below to receive a top-market offer for your vehicle.</p>
+            <div className="text-center mb-8 md:mb-10">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-foreground">Get Your Instant Quote</h2>
+              <p className="text-muted-foreground text-base md:text-lg">Fill out the details below to receive a top-market offer for your vehicle.</p>
             </div>
 
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-semibold text-foreground">Full Name</label>
                     <Input required placeholder="John Doe" className="bg-white border-border h-12 shadow-sm" />
@@ -78,7 +78,7 @@ export function InstantQuote() {
 
                 <div className="space-y-2">
                   <label className="text-sm font-semibold text-foreground">Image Upload</label>
-                  <Input type="file" multiple className="bg-white border-border h-12 shadow-sm" />
+                  <Input type="file" multiple className="bg-white border-border h-12 shadow-sm pt-2" />
                 </div>
 
                 <div className="pt-4">
@@ -91,15 +91,15 @@ export function InstantQuote() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="text-center py-12 space-y-6"
+                className="text-center py-8 md:py-12 space-y-6"
               >
-                <div className="w-20 h-20 mx-auto rounded-full bg-green-100 border-2 border-green-500 flex items-center justify-center">
-                  <svg className="w-10 h-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-16 h-16 md:w-20 md:h-20 mx-auto rounded-full bg-green-100 border-2 border-green-500 flex items-center justify-center">
+                  <svg className="w-8 h-8 md:w-10 md:h-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-3xl font-bold text-foreground">Request Received!</h3>
-                <p className="text-muted-foreground max-w-md mx-auto">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground">Request Received!</h3>
+                <p className="text-muted-foreground max-w-md mx-auto text-sm md:text-base">
                   Thank you for submitting your vehicle details. Our team is calculating your premium offer and will contact you shortly.
                 </p>
                 <Button variant="outline" onClick={() => setSubmitted(false)} className="mt-4 rounded-full">

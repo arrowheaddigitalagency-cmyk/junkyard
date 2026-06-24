@@ -32,18 +32,18 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-24 bg-secondary/30 relative">
-      <div className="container px-4 md:px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-foreground">How It Works</h2>
-          <p className="text-muted-foreground text-lg">
+    <section className="py-16 md:py-24 bg-secondary/30 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 md:mb-6 text-foreground">How It Works</h2>
+          <p className="text-muted-foreground text-base md:text-lg">
             Our streamlined process makes selling your junk car effortless. Get paid in four simple steps.
           </p>
         </div>
 
-        <div className="relative grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-8">
           {/* Connecting line */}
-          <div className="hidden md:block absolute top-1/4 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary/30 to-transparent -translate-y-1/2"></div>
+          <div className="hidden lg:block absolute top-[32px] left-[10%] w-[80%] h-[2px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
 
           {steps.map((step, index) => (
             <motion.div
@@ -60,7 +60,7 @@ export function HowItWorks() {
                   {step.num}
                 </div>
               </div>
-              <h4 className="text-xl font-semibold mt-4 text-foreground">{step.title}</h4>
+              <h4 className="text-lg md:text-xl font-semibold mt-4 text-foreground">{step.title}</h4>
               <p className="text-sm text-muted-foreground">{step.description}</p>
             </motion.div>
           ))}

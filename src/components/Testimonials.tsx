@@ -13,7 +13,7 @@ const testimonials = [
   {
     name: "David T.",
     role: "Uber Driver",
-    content: "My car was totaled in an accident. Prime gave me a better offer than my insurance buyout. Very professional and respectful.",
+    content: "My car was totaled in an accident. Arrowhead gave me a better offer than my insurance buyout. Very professional.",
     rating: 4.5,
   },
   {
@@ -32,16 +32,16 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-24 bg-secondary/20 relative overflow-hidden">
-      <div className="absolute top-0 right-0 -mr-40 mt-20 w-96 h-96 bg-primary/5 rounded-full blur-[100px]"></div>
+    <section className="py-16 md:py-24 bg-secondary/20 relative overflow-hidden">
+      <div className="absolute top-0 right-0 -mr-40 mt-20 w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-primary/5 rounded-full blur-[80px] md:blur-[100px]"></div>
       
-      <div className="container px-4 md:px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
           <h2 className="text-sm font-bold tracking-wider text-primary uppercase mb-3">Client Success</h2>
-          <h3 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-foreground">What People Are Saying</h3>
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-foreground">What People Are Saying</h3>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -49,7 +49,7 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white border border-border shadow-sm rounded-2xl p-6 hover:shadow-md transition-shadow"
+              className="bg-white border border-border shadow-sm rounded-2xl p-6 hover:shadow-md transition-shadow flex flex-col"
             >
               <div className="flex mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -59,13 +59,13 @@ export function Testimonials() {
                   />
                 ))}
               </div>
-              <p className="text-muted-foreground mb-6 italic">"{testimonial.content}"</p>
-              <div className="flex items-center gap-3 mt-auto">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+              <p className="text-muted-foreground mb-6 italic text-sm md:text-base flex-1">"{testimonial.content}"</p>
+              <div className="flex items-center gap-3 mt-auto pt-4 border-t border-border/50">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold shrink-0">
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>
-                  <h5 className="font-semibold text-sm text-foreground">{testimonial.name}</h5>
+                  <h5 className="font-semibold text-sm text-foreground leading-tight">{testimonial.name}</h5>
                   <span className="text-xs text-muted-foreground">{testimonial.role}</span>
                 </div>
               </div>

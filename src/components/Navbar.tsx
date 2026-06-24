@@ -22,10 +22,10 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-white/80 backdrop-blur-md">
-      <div className="container flex h-20 items-center justify-between px-4 md:px-6">
+      <div className="max-w-7xl mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl font-bold tracking-tighter text-foreground">
-            <span className="text-primary">PRIME</span> SALVAGE
+          <span className="text-xl md:text-2xl font-bold tracking-tighter text-foreground">
+            <span className="text-primary">ARROWHEAD</span> DIGITECH
           </span>
         </Link>
         
@@ -56,7 +56,7 @@ export function Navbar() {
         </div>
 
         <button 
-          className="lg:hidden text-foreground"
+          className="lg:hidden text-foreground p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -65,13 +65,13 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden absolute top-20 left-0 w-full bg-white border-b border-border shadow-lg p-4 flex flex-col gap-4">
+        <div className="lg:hidden absolute top-20 left-0 w-full bg-white border-b border-border shadow-lg p-4 flex flex-col gap-4 max-h-[calc(100vh-80px)] overflow-y-auto">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className={`text-lg font-medium p-2 rounded-md ${
+              className={`text-lg font-medium p-3 rounded-md ${
                 pathname === link.href ? "bg-primary/10 text-primary" : "text-foreground hover:bg-secondary"
               }`}
             >
@@ -79,7 +79,7 @@ export function Navbar() {
             </Link>
           ))}
           <Link href="/sell-your-junk-car" onClick={() => setMobileMenuOpen(false)}>
-            <Button className="w-full bg-primary hover:bg-primary/90 text-white mt-2">
+            <Button className="w-full bg-primary hover:bg-primary/90 text-white mt-4 h-12 text-lg rounded-full">
               Get Free Quote
             </Button>
           </Link>

@@ -33,12 +33,12 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section className="py-24 bg-white relative border-t border-border">
-      <div className="container px-4 md:px-6">
+    <section className="py-16 md:py-24 bg-white relative border-t border-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-foreground">Frequently Asked Questions</h2>
-            <p className="text-muted-foreground text-lg">Everything you need to know about selling your junk car to us.</p>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-foreground">Frequently Asked Questions</h2>
+            <p className="text-muted-foreground text-base md:text-lg">Everything you need to know about selling your junk car to us.</p>
           </div>
 
           <motion.div
@@ -49,11 +49,11 @@ export function FAQ() {
           >
             <Accordion className="w-full space-y-4">
               {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border border-border bg-white shadow-sm px-6 rounded-xl overflow-hidden">
-                  <AccordionTrigger className="text-left hover:no-underline hover:text-primary transition-colors py-4 font-semibold text-foreground">
+                <AccordionItem key={index} value={`item-${index}`} className="border border-border bg-white shadow-sm px-4 md:px-6 rounded-xl overflow-hidden">
+                  <AccordionTrigger className="text-left hover:no-underline hover:text-primary transition-colors py-4 font-semibold text-foreground text-sm md:text-base">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-4 leading-relaxed">
+                  <AccordionContent className="text-muted-foreground pb-4 leading-relaxed text-sm md:text-base">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

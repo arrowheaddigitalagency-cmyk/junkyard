@@ -38,28 +38,29 @@ const features = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-24 bg-white relative border-y border-border">
-      <div className="container px-4 md:px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section className="py-16 md:py-24 bg-white relative border-y border-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-sm font-bold tracking-wider text-primary uppercase mb-3">The Prime Advantage</h2>
-            <h3 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 text-foreground">Why Choose Us</h3>
-            <p className="text-muted-foreground text-lg mb-8">
+            <h2 className="text-sm font-bold tracking-wider text-primary uppercase mb-3">The Arrowhead Advantage</h2>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-foreground">Why Choose Us</h3>
+            <p className="text-muted-foreground text-base md:text-lg mb-8">
               We aren't just another junkyard. We are a modernized, technology-driven auto salvage company dedicated to providing the most transparent, lucrative, and seamless vehicle selling experience.
             </p>
             
-            <div className="relative h-[400px] rounded-2xl overflow-hidden border border-border shadow-xl">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
+            <div className="relative h-[300px] sm:h-[400px] rounded-2xl overflow-hidden border border-border shadow-xl">
+              {/* Authentic Auto Salvage / Tow Truck Image */}
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542282088-fe8426682b8f?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
             </div>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -72,7 +73,7 @@ export function WhyChooseUs() {
                 <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
                   <feature.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h4 className="text-xl font-semibold text-foreground">{feature.title}</h4>
+                <h4 className="text-lg md:text-xl font-semibold text-foreground">{feature.title}</h4>
                 <p className="text-sm text-muted-foreground">{feature.description}</p>
               </motion.div>
             ))}

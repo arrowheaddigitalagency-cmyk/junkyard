@@ -7,24 +7,24 @@ import { Phone, Mail, MapPin } from "lucide-react";
 export default function ContactPage() {
   return (
     <main className="flex flex-col bg-background">
-      <div className="pt-24 pb-12 bg-secondary/30 text-center border-b border-border">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">Contact Us</h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      <div className="pt-20 md:pt-24 pb-10 md:pb-12 bg-secondary/30 text-center border-b border-border px-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">Contact Us</h1>
+        <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
           Have questions or need assistance? Reach out to our professional team today.
         </p>
       </div>
       
-      <section className="py-24 bg-white">
-        <div className="container px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-16">
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
-              <p className="text-muted-foreground mb-8">
-                Fill out the form below and one of our salvage specialists will get back to you as soon as possible.
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Get In Touch</h2>
+              <p className="text-muted-foreground mb-6 md:mb-8 text-sm md:text-base">
+                Fill out the form below and one of our Arrowhead Digitech salvage specialists will get back to you as soon as possible.
               </p>
               
-              <form className="space-y-6">
-                <div className="grid grid-cols-2 gap-4">
+              <form className="space-y-4 md:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-sm font-semibold">First Name</label>
                     <Input placeholder="John" className="h-12" />
@@ -40,17 +40,17 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-semibold">Message</label>
-                  <Textarea placeholder="How can we help you?" className="min-h-[150px]" />
+                  <Textarea placeholder="How can we help you?" className="min-h-[120px] md:min-h-[150px]" />
                 </div>
-                <Button size="lg" className="w-full h-14 text-lg bg-primary hover:bg-primary/90 text-white rounded-full">
+                <Button size="lg" className="w-full h-12 md:h-14 text-base md:text-lg bg-primary hover:bg-primary/90 text-white rounded-full">
                   Send Message
                 </Button>
               </form>
             </div>
             
-            <div className="space-y-12">
+            <div className="space-y-10 md:space-y-12">
               <div>
-                <h3 className="text-2xl font-bold mb-6">Business Information</h3>
+                <h3 className="text-xl md:text-2xl font-bold mb-6">Business Information</h3>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
@@ -67,7 +67,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-lg">Email</h4>
-                      <p className="text-muted-foreground">contact@primesalvage.example.com</p>
+                      <p className="text-muted-foreground">contact@arrowheaddigitech.com</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -82,7 +82,7 @@ export default function ContactPage() {
                 </div>
               </div>
               
-              <div className="bg-secondary/20 h-[300px] rounded-3xl border border-border flex items-center justify-center">
+              <div className="bg-secondary/20 h-[250px] md:h-[300px] rounded-3xl border border-border flex items-center justify-center">
                 <p className="text-muted-foreground font-medium">Google Maps Placeholder</p>
               </div>
             </div>

@@ -17,8 +17,13 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Prime Salvage Auto Parts | Premium Junkyard",
-  description: "Turn your unwanted vehicle into cash today. Fast pickup, fair offers, professional service.",
+  title: "Arrowhead Digitech | Premium Auto Salvage",
+  description: "Turn your unwanted vehicle into cash today. Fast pickup, fair offers, professional service by Arrowhead Digitech.",
+  openGraph: {
+    title: "Arrowhead Digitech | Premium Auto Salvage",
+    description: "Turn your unwanted vehicle into cash today. Fast pickup, fair offers, professional service by Arrowhead Digitech.",
+    type: "website",
+  }
 };
 
 export default function RootLayout({
